@@ -1,0 +1,42 @@
+.section { margin-bottom: 1rem; }
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 1.8rem 2rem 0.8rem;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  color: var(--cat-color, #f0ede6);
+  line-height: 1;
+}
+
+.sectionCount {
+  font-size: 0.78rem;
+  color: #888;
+  font-weight: 300;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  padding: 0 2rem 2rem;
+}
+
+@media (max-width: 600px) {
+  .sectionHead { padding: 1.4rem 1rem 0.6rem; }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .grid { grid-template-columns: 1fr; }
+}

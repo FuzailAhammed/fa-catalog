@@ -1,0 +1,36 @@
+.filterBar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 1.2rem 2rem;
+}
+
+.filterBtn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 30px;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  letter-spacing: 0.03em;
+}
+
+.filterBtn:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f0ede6;
+}
+
+.filterBtn.active {
+  background: var(--cat-color);
+  border-color: var(--cat-color);
+  color: #0d0d0d;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .filterBar { padding: 1rem; }
+}

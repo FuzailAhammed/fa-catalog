@@ -1,0 +1,142 @@
+.detailView { animation: fadeIn 0.3s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 13, 0.95) 0%,
+    rgba(13, 13, 13, 0.2) 60%,
+    transparent 100%
+  );
+}
+
+.heroLabel {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+}
+
+.catTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cat-color);
+  margin-bottom: 8px;
+}
+
+.itemTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: #f0ede6;
+}
+
+.body { padding: 2rem; }
+
+.specsHeading {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888;
+  margin-bottom: 1.2rem;
+}
+
+.propsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.propCard {
+  padding: 1rem 1.2rem;
+  background: #161616;
+  border-right: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.propLabel {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.propValue {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f0ede6;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  flex: 1;
+  min-width: 140px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d0d0d;
+  cursor: pointer;
+  transition: opacity 0.18s;
+}
+
+.btnPrimary:hover { opacity: 0.85; }
+
+.btnOutline {
+  padding: 14px 24px;
+  background: transparent;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.btnOutline:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f0ede6;
+}
+
+@media (max-width: 600px) {
+  .hero { height: 280px; }
+  .heroLabel { left: 1rem; bottom: 1rem; right: 1rem; }
+  .body { padding: 1.5rem 1rem; }
+  .propsGrid { grid-template-columns: repeat(2, 1fr); }
+}
